@@ -12,7 +12,7 @@ export function home () {
 
     const title = document.createElement("div");
     title.classList.add("title");
-    title.textContent = "Welcome to Hanoi Vietnam";
+    title.textContent = "HANOÏ IN FRANCE";
     container.appendChild(title);
 
     const container2 = document.createElement("div");
@@ -21,7 +21,7 @@ export function home () {
 
     const address = document.createElement("div");
     address.classList.add("address");
-    address.textContent = "11 Street Asia, 123000 NewCity \n06 76 76 67 76 \n\nOpen 6J/7 \n11:30-14:30 18:00-21:45 \nClosed on Sunday";
+    address.textContent = "11 Street Asia, 123000 NewCity \n06 76 76 67 76 \n\nOpen 6D/7 \n11:30-14:30 18:00-21:45 \nClosed on Sunday";
     container2.appendChild(address);
 
     const img = document.createElement("img");
@@ -30,9 +30,6 @@ export function home () {
     img.classList.add("image-restaurant");
 
     container2.appendChild(img);
-
-        
-
 
 
 }

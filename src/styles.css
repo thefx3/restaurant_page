@@ -5,11 +5,47 @@
     font-family: "Roboto", "Arial";
 }
 
+:root {
+    --primary-color: #75f6db; 
+    --secondary-color: #ffffff;
+    --thirdary-color: #001e41;
+    --forth-color: #5165ee;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
 header {
     justify-self: center; 
     width: 100%;
     padding: 1rem 2rem;
-    background-color: rgba(43, 255, 0, 0.384);
+    background-color:  var(--primary-color);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--thirdary-color);
+    width: 100%;
+    padding : 40px 20% 40px 20%;
+
+    margin-top: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
 
 nav {
@@ -27,28 +63,28 @@ nav {
         > * {
             width: 120px ;
             height: 50px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            border-radius: 10px;
-            appearance: none;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing:4px;
+            color: var(--thirdary-color);
             border: none;
             cursor: pointer;
+            background-color: transparent;
         }
     }
 
     #hanoi {
         justify-self: center;
         align-self: center;
-        color: rgb(77, 0, 0);
+        color: var(--thirdary-color);
         font-size: 30px;
-        font-weight: bold;  
+        font-weight: 600;  
+        letter-spacing: 2px;
     }
 }
 
 nav button:hover {
-        transform: scale(1.15); 
-        background-color: rgb(255, 207, 215);
-        border-radius: 10px;
+        transform: scale(1.10); 
 }
 /* Add smoother transition ! */
 
@@ -59,6 +95,8 @@ nav button:hover {
     margin: 30px 0;
     text-align: center;
     font-size: 3rem;
+    font-weight: bold;
+    color: var(--thirdary-color);
 }
 
 .container2 {
@@ -66,12 +104,11 @@ nav button:hover {
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 3rem; /* Distance constante entre texte et image */
+    gap: 3rem;
     width: 80%;
     margin: 0 auto;
     flex-wrap: wrap;
-
-    border: 1px solid blue;
+    margin-bottom: 3rem;
 }
 
 .address {
@@ -85,6 +122,30 @@ nav button:hover {
     max-width: 400px;
     width: 100%;
     height: auto;
-    border-radius: 10px; /* optionnel : un peu de style */
 }
 
+
+/* MENU CSS */
+
+
+
+.menu-container {
+    display: grid; 
+    grid-template-columns: 400px 1fr;
+    height: 90vh;
+
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 100px;
+    padding-left: 50px;
+    border-right : 5px solid var(--thirdary-color);
+
+    a {
+        font-size: 25px;
+    }
+}
