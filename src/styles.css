@@ -35,13 +35,11 @@ header {
 }
 
 .copyright {
-    display: flex;
+
     background-color: var(--primary-color);
     color: var(--thirdary-color);
     width: 100%;
     padding : 40px 20% 40px 20%;
-
-    margin-top: auto;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -131,7 +129,7 @@ nav button:hover {
 
 .menu-container {
     display: grid; 
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: minmax(350px, 30%) 1fr;
     height: 90vh;
 
 }
@@ -139,13 +137,54 @@ nav button:hover {
 .navigation {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+
     align-items: start;
     gap: 100px;
-    padding-left: 50px;
-    border-right : 5px solid var(--thirdary-color);
+    padding-top: 75px;
+    padding-left: clamp(50px, 35%, 50%);
+    border-right : 3px solid var(--thirdary-color);
 
     a {
         font-size: 25px;
     }
+}
+
+.menu {
+    display: flex; 
+    flex-direction: column;
+    padding: 50px;
+    
+
+    .menu-title {
+        font-size: 50px;
+        font-weight: bold;
+        color: var(--thirdary-color);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.entries-items {
+    display: grid; 
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+    margin-bottom: 50px;
+}
+
+
+.box-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 5px;
+    gap: 20px;
+
 }
