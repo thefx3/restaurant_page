@@ -133,22 +133,6 @@ nav button:hover {
 
 }
 
-.navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-
-    align-items: start;
-    gap: 100px;
-    padding-top: 75px;
-    padding-left: clamp(50px, 35%, 50%);
-    border-right : 3px solid var(--thirdary-color);
-
-    a {
-        font-size: 25px;
-    }
-}
-
 .menu {
     display: flex; 
     flex-direction: column;
@@ -179,7 +163,7 @@ img {
 }
 
 
-.box-items {
+.menu-item {
     display: flex;
     align-items: center;
     flex-direction: column;
