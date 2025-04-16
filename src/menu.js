@@ -2,6 +2,9 @@ import nemImage from './images/entrees_1.jpeg'
 import saladImage from './images/entrees_3.jpeg'
 import saladShrimp from './images/entrees_4.jpg'
 
+import main1 from './images/main_1.jpg'
+import main2 from './images/main_2.jpg'
+import main3 from './images/main_3.jpg'
 
 export function menu () {
     const menu_content = document.getElementById("content");
@@ -51,7 +54,7 @@ export function menu () {
 
 
     entries_items.appendChild(
-        createMenuItem("NEMS CHICKEN (2 pieces) 6.50€", nemImage, "NEMS", "image-nems")
+        createMenuItem("2 NEMS CHICKEN 6.50€", nemImage, "Nems", "image-nems")
     );
     
     entries_items.appendChild(
@@ -59,8 +62,22 @@ export function menu () {
     );
 
     entries_items.appendChild(
-        createMenuItem("SHRIMP SALADE 6.50€", saladShrimp, "Salad", "image-shrimp")
+        createMenuItem("SHRIMP SALAD 6.50€", saladShrimp, "Salad", "image-shrimp")
     );
 
+
+    const main_items = document.createElement("div");
+    main_items.classList.add("main-items");
+    menu.appendChild(main_items);
+
+    main_items.appendChild(
+        createMenuItem("BEEF PHO 9.50€", main1, "Pho", "image-pho")
+    );
+    main_items.appendChild(
+        createMenuItem("BOBUN 9.50€", main2, "Bobun", "image-bobun")
+    );  
+    main_items.appendChild(
+        createMenuItem("FRIED NOODLES 8.50€", main3, "Noodles", "image-noodles")
+    );
 
 }
