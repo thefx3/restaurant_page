@@ -32,6 +32,7 @@ header {
 #content {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .copyright {
@@ -128,9 +129,7 @@ nav button:hover {
 
 
 .menu-container {
-    display: grid; 
-    grid-template-columns: minmax(350px, 30%) 1fr;
-    height: 90vh;
+    height: auto;
 
 }
 
@@ -153,7 +152,7 @@ nav button:hover {
 .menu {
     display: flex; 
     flex-direction: column;
-    padding: 50px;
+    padding: 30px;
     
 
     .menu-title {
@@ -167,23 +166,23 @@ nav button:hover {
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
+    border-radius: 5px;
 }
 
 .entries-items {
-    display: grid; 
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+    display: grid; ;
+    grid-template-columns: repeat(3, minmax(150px, 300px));
     margin-bottom: 50px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 
 .box-items {
     display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
+    align-items: center;
+    flex-direction: column;
     padding: 5px;
     gap: 20px;
 

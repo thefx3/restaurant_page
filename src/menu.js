@@ -1,5 +1,6 @@
 import nemImage from './images/entrees_1.jpeg'
-import saladImage from './images/entrees_4.jpg'
+import saladImage from './images/entrees_3.jpeg'
+import saladShrimp from './images/entrees_4.jpg'
 
 
 export function menu () {
@@ -12,31 +13,31 @@ export function menu () {
 
     content.appendChild(menu_container);
 
-    const navigation = document.createElement("div");
-    navigation.classList.add("navigation");
-    menu_container.appendChild(navigation);
+    // const navigation = document.createElement("div");
+    // navigation.classList.add("navigation");
+    // menu_container.appendChild(navigation);
 
 
-    const entries = document.createElement("a");
-    entries.classList.add("entries");
-    entries.textContent = "ENTRÉES";
-    navigation.appendChild(entries);
-    const main_courses = document.createElement("a");
-    main_courses.classList.add("main-courses");
-    main_courses.textContent = "PLATS PRINCIPAUX";
-    navigation.appendChild(main_courses);
-    const desserts = document.createElement("a");
-    desserts.classList.add("desserts");
-    desserts.textContent = "DESSERTS";
-    navigation.appendChild(desserts);
-    const drinks = document.createElement("a");
-    drinks.classList.add("drinks");
-    drinks.textContent = "BOISSONS";
-    navigation.appendChild(drinks);
-    const specials = document.createElement("a");
-    specials.classList.add("specials");
-    specials.textContent = "SPECIALITÉS";
-    navigation.appendChild(specials);
+    // const entries = document.createElement("a");
+    // entries.classList.add("entries");
+    // entries.textContent = "ENTRÉES";
+    // navigation.appendChild(entries);
+    // const main_courses = document.createElement("a");
+    // main_courses.classList.add("main-courses");
+    // main_courses.textContent = "PLATS PRINCIPAUX";
+    // navigation.appendChild(main_courses);
+    // const desserts = document.createElement("a");
+    // desserts.classList.add("desserts");
+    // desserts.textContent = "DESSERTS";
+    // navigation.appendChild(desserts);
+    // const drinks = document.createElement("a");
+    // drinks.classList.add("drinks");
+    // drinks.textContent = "BOISSONS";
+    // navigation.appendChild(drinks);
+    // const specials = document.createElement("a");
+    // specials.classList.add("specials");
+    // specials.textContent = "SPECIALITÉS";
+    // navigation.appendChild(specials);
 
 
     const menu = document.createElement("div");
@@ -60,17 +61,19 @@ export function menu () {
     box_items.classList.add("box-items");
     entries_items.appendChild(box_items);
 
+    const image_nems = document.createElement("img");
+    image_nems.src = nemImage;
+    image_nems.alt = "NEMS";
+    image_nems.classList.add("image-nems");
+    box_items.appendChild(image_nems);
+
     const item1 = document.createElement("div");
     item1.classList.add("item");
     item1.textContent = "NEMS CHICKEN (2 pieces) 6.50€";
     box_items.appendChild(item1);
 
 
-    const image_nems = document.createElement("img");
-    image_nems.src = nemImage;
-    image_nems.alt = "NEMS";
-    image_nems.classList.add("image-nems");
-    box_items.appendChild(image_nems);
+   
 
     // END
 
@@ -80,17 +83,37 @@ export function menu () {
     salad_items.classList.add("box-items");
     entries_items.appendChild(salad_items);
 
+    const image_salad = document.createElement("img");
+    image_salad.src = saladImage;
+    image_salad.alt = "Salad";
+    image_salad.classList.add("image-salad");
+    salad_items.appendChild(image_salad);
+
     const item2 = document.createElement("div");
     item2.classList.add("item");
     item2.textContent = "MEAT SALAD 6.90€";
     salad_items.appendChild(item2);
 
 
-    const image_salad = document.createElement("img");
-    image_salad.src = saladImage;
-    image_salad.alt = "Salad";
-    image_salad.classList.add("image-salad");
-    salad_items.appendChild(image_salad);
+    // END
+
+    // 1 BOX ITEM 
+
+    const shrimp_items = document.createElement("div");
+    shrimp_items.classList.add("box-items");
+    entries_items.appendChild(shrimp_items);
+
+    const image_shrimp = document.createElement("img");
+    image_shrimp.src = saladShrimp;
+    image_shrimp.alt = "Salad Shrimp";
+    image_shrimp.classList.add("image-shrimp");
+    shrimp_items.appendChild(image_shrimp);
+
+    const item3 = document.createElement("div");
+    item3.classList.add("item");
+    item3.textContent = "SHRIMP SALAD 6.50€";
+    shrimp_items.appendChild(item3);
+
 
     // END
 
