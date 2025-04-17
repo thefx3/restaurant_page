@@ -17,3 +17,7 @@ home_button.addEventListener("click", () => {
 menu_button.addEventListener("click", () => {
     menu();
 })
+
+about_button.addEventListener("click", () => {
+    about();
+})
