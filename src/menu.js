@@ -7,30 +7,21 @@ import main2 from './images/main_2.jpg'
 import main3 from './images/main_3.jpg'
 
 export function menu () {
+
     const menu_content = document.getElementById("content");
     content.innerHTML = "";
 
+    //Create menu title
 
-    const menu_container = document.createElement("div");
-    menu_container.classList.add("menu-container");
+    function createTitle (text) {
+        const title = document.createElement("div");
+        title.classList.add("menu-subtitle");
+        title.textContent = text;
 
-    content.appendChild(menu_container);
+        menu.appendChild(title);
+        return title;
+    }
 
-
-    const menu = document.createElement("div");
-    menu.classList.add("menu");
-    menu_container.appendChild(menu);
-
-
-    const menu_title = document.createElement("div");
-    menu_title.classList.add("menu-title");
-    menu_title.textContent = "MENU";
-    menu.appendChild(menu_title);
-    
-
-    const entries_items = document.createElement("div");
-    entries_items.classList.add("entries-items");
-    menu.appendChild(entries_items);
 
     // Create menu items
     function createMenuItem(text, imgSrc, imgAlt, imgClass) {
@@ -53,18 +44,42 @@ export function menu () {
     }
 
 
+    //menu_container
+    const menu_container = document.createElement("div");
+    menu_container.classList.add("menu-container");
+    content.appendChild(menu_container);
+
+    //menu
+    const menu = document.createElement("div");
+    menu.classList.add("menu");
+    menu_container.appendChild(menu);
+
+    //menu_title
+    const menu_title = document.createElement("div");
+    menu_title.classList.add("menu-title");
+    menu_title.textContent = "MENU";
+    menu.appendChild(menu_title);
+    
+    //menu_subtitle : entries
+    menu.appendChild(createTitle("ENTRIES"));
+
+    const entries_items = document.createElement("div");
+    entries_items.classList.add("entries-items");
+    menu.appendChild(entries_items);
+
+    //3 entries
     entries_items.appendChild(
         createMenuItem("2 NEMS CHICKEN 6.50€", nemImage, "Nems", "image-nems")
     );
-    
     entries_items.appendChild(
-        createMenuItem("MEAT SALAD 6.90€", saladImage, "Salad", "image-salad")
+        createMenuItem("MEAT SALAD 6.90€", saladShrimp, "Salad", "image-salad")
+    );
+    entries_items.appendChild(
+        createMenuItem("SHRIMP SALAD 6.50€", saladImage, "Salad", "image-shrimp")
     );
 
-    entries_items.appendChild(
-        createMenuItem("SHRIMP SALAD 6.50€", saladShrimp, "Salad", "image-shrimp")
-    );
 
+    menu.appendChild(createTitle("MAIN COURSES"));
 
     const main_items = document.createElement("div");
     main_items.classList.add("main-items");
